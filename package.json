@@ -21,6 +21,8 @@
     "svelte": "^3.38.2"
   },
   "devDependencies": {
-    "@testing-library/svelte": "^3.0.3"
+    "@testing-library/svelte": "^3.0.3",
+    "jest": "^26",
+    "svelte-jester": "^1.7.0"
   }
 }
