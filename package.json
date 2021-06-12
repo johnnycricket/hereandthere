@@ -1,0 +1,23 @@
+{
+  "name": "hereandthere",
+  "version": "1.0.0",
+  "description": "time there and time there",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnnycricket/hereandthere.git"
+  },
+  "author": "john vorwald",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnnycricket/hereandthere/issues"
+  },
+  "homepage": "https://github.com/johnnycricket/hereandthere#readme",
+  "dependencies": {
+    "parcel": "*",
+    "svelte": "^3.38.2"
+  }
+}
