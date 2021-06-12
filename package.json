@@ -19,5 +19,8 @@
   "dependencies": {
     "parcel": "*",
     "svelte": "^3.38.2"
+  },
+  "devDependencies": {
+    "@testing-library/svelte": "^3.0.3"
   }
 }
