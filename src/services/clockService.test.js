@@ -35,5 +35,5 @@ describe('All of clockService', () => {
         }
         const actual = service(negExpectedHour);
         expect(actual).toEqual(`${expectedHour}:${expectedMinute}`);
-    })
+    });
 })

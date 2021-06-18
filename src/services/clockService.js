@@ -3,25 +3,40 @@ export default function clockService(offset = 0) {
         h = time.getUTCHours(),
         m = time.getUTCMinutes(),
         formatted_h = "",
-        formatted_m = "";
+        formatted_m = "",
+        nightday = "";
 
-        if(h + offset > 24) {
-            h = h + offset - 24;
-        } else if(h + offset < 0) {
-            h = h + offset + 24;
-        } else{
-            h = h + offset;
-        }
+    h = notover24(h, offset)
 
-        formatted_h = `${h}`;
-        formatted_m = `${m}`;
+    nightday = amPm(h)
 
-        if(h < 10){
-            formatted_h = `0${h}`;
-        }
-        if(m < 10){
-            formatted_m = `0${m}`;
-        }
+    h = twelvehourclock(h)
 
-    return formatted_h + ":" + formatted_m;
+    formatted_h = addzero(h)
+    formatted_m = addzero(m)
+
+    return formatted_h + ":" + formatted_m + ' ' + nightday;
+}
+
+function amPm(hour) {
+    return hour < 12 ? "am" : "pm";
+}
+
+function twelvehourclock(hour) {
+    return hour > 12 ? hour - 12 : hour;
+}
+
+function notover24(hour, offset) {
+    if(hour + offset > 24) {
+        hour = hour + offset - 24;
+    } else if(hour + offset < 0) {
+        hour = hour + offset + 24;
+    } else{
+        hour = hour + offset;
+    }
+    return hour;
+}
+
+function addzero(time){
+    return time < 10 ? `0${time}`: `${time}`
 }
