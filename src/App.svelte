@@ -10,4 +10,17 @@
     <TheTime offset={2} place="Germany"/>
 </main>
 
-<style></style>
+<style>
+    header, main {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 95%;
+        position: relative;
+        display: block;
+        margin: 1rem;
+    }
+    header h1 {
+        font-weight: normal;
+        align-content: center;
+        font-size: 3rem;
+    }
+</style>

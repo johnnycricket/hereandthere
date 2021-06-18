@@ -16,8 +16,22 @@ import { onMount } from 'svelte';
 </script>
 
 <section>
-    <span data-testid="clock">{theClock}</span>
-    <span>{place}</span>
+    <span class="place">{place}</span>
+    <span data-testid="clock" class="clock">{theClock}</span>
 </section>
 
-<style></style>
+<style>
+    section {
+        display:block;
+        position:relative;
+        margin-bottom: 2rem;
+    }
+    .place {
+        font-size: 2rem;
+    }
+    .clock {
+        font-size: 6rem;
+        width: max-content;
+        display: block;
+    }
+</style>
